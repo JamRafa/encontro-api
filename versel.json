@@ -1,8 +1,7 @@
 {
   "version": 2,
-  "functions": {
-    "/api/inscritos": {
-      "handler": "api/inscritos.js"
-    }
-  }
+  "builds": [{ "src": "server.js", "use": "@vercel/node" }],
+  "routes": [
+    { "src": "/inscritos", "dest": "/server.js" }
+  ]
 }
